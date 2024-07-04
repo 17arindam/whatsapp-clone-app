@@ -52,14 +52,37 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               onTap: _openFilteredCountryPickerDialog,
               title: _buildDialogItem(_selectedFilteredDialogCountry),
             ),
-            // Add your TextField for phone number input here
-            // TextField(
-            //   keyboardType: TextInputType.phone,
-            //   decoration: InputDecoration(
-            //     prefixText: _countryCode,
-            //     hintText: 'Phone number',
-            //   ),
-            // ),
+            Row(
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border(
+                      bottom: BorderSide(width: 1.5, color: greenColor),
+                    ),
+                  ),
+                  width: 80,
+                  height: 42,
+                  alignment: Alignment.center,
+                  child: Text('+${_selectedFilteredDialogCountry.phoneCode}'),
+                ),
+                SizedBox(width: 8,),
+                Expanded(
+                    child: Container(
+                  height: 40,
+                  child: TextField(
+                    decoration: InputDecoration(hintText: 'Phone Number'),
+                  ),
+                )),
+              ],
+            ),
+            Expanded(
+                child: Align(
+                    alignment: Alignment.bottomCenter,
+                    child: MaterialButton(
+                      onPressed: () {},
+                      color: greenColor,
+                      child: Text('Next',style: TextStyle(color: Colors.white,fontSize: 16),),
+                    )))
           ],
         ),
       ),
