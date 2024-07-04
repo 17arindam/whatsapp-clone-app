@@ -1,6 +1,7 @@
 import 'package:country_pickers/country.dart';
 import 'package:country_pickers/country_pickers.dart';
 import 'package:flutter/material.dart';
+import 'package:whatsapp_clone/presentation/pages/phone_verification_page.dart';
 import 'package:whatsapp_clone/presentation/widgets/theme/style.dart';
 
 class RegistrationScreen extends StatefulWidget {
@@ -71,6 +72,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   height: 40,
                   child: TextField(
                     decoration: InputDecoration(hintText: 'Phone Number'),
+                    
                   ),
                 )),
               ],
@@ -79,7 +81,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 child: Align(
                     alignment: Alignment.bottomCenter,
                     child: MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (_)=>PhoneVerificationPage()));
+                      },
                       color: greenColor,
                       child: Text('Next',style: TextStyle(color: Colors.white,fontSize: 16),),
                     )))
