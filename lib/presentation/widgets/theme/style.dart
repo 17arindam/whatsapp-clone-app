@@ -8,5 +8,5 @@ final Color primaryColor = Color.fromRGBO(76,175,80,1);
 final Color textIconColor = Color.fromRGBO(255,255,255,1);
 final Color textPrimaryColor = Color.fromRGBO(33,33,33,1);
 final Color dividerColor = Color.fromRGBO(189,189,189,1);
-final Color? textIconColorGray = Colors.grey[300];
+final Color textIconColorGray = const Color.fromRGBO(224, 224, 224, 1);
 final Color greenColor = Color.fromRGBO(76,175,80,1);
