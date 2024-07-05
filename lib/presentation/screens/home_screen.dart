@@ -53,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:AppBar(
+      appBar: _currentPageIndex !=0?AppBar(
         elevation: 0.0,
         automaticallyImplyLeading: false,
         backgroundColor: _isSearch == false ? primaryColor : Colors.transparent,
@@ -82,10 +82,17 @@ class _HomeScreenState extends State<HomeScreen> {
               icon: Icon(Icons.more_vert),
               color: Colors.white),
         ],
-      ),
+      ):null,
       body: Column(
         children: [
-          CustomTabBar(index: _currentPageIndex),
+           _isSearch == false
+              ? _currentPageIndex != 0
+                  ? CustomTabBar(index: _currentPageIndex)
+                  : Container(height: 0.0, width: 0.0,)
+              : Container(
+                  height: 0.0,
+                  width: 0.0,
+                ),
           Expanded(child: PageView.builder(itemCount: _pages.length,controller: _pageViewController,onPageChanged: (index){
             setState(() {
               
