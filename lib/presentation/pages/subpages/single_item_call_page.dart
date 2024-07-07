@@ -60,6 +60,7 @@ class SingleItemCallPage extends StatelessWidget {
             padding: const EdgeInsets.only(left: 60, right: 10),
             child: Divider(
               thickness: 1.50,
+              
             ),
           ),
         ],
