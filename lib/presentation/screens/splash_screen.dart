@@ -1,8 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/presentation/screens/home_screen.dart';
-import 'package:whatsapp_clone/presentation/screens/registration_screen.dart';
+
 import 'package:whatsapp_clone/presentation/screens/welcome_screen.dart';
 
 class SplashScreen extends StatefulWidget {
