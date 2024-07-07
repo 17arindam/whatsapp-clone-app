@@ -11,11 +11,11 @@ class StatusPage extends StatelessWidget {
     return Scaffold(
       body: Scaffold(
         body: Stack(
-          children: <Widget>[
+          children: [
             _customFloatingActionButton(),
             SingleChildScrollView(
               child: Column(
-                children: <Widget>[
+                children: [
                   _storyWidget(),
                   SizedBox(height: 8,),
                   _recentTextWidget(),
@@ -35,7 +35,7 @@ class StatusPage extends StatelessWidget {
       right: 10,
       bottom: 15,
       child: Column(
-        children: <Widget>[
+        children: [
           Container(
             height: 45,
             width: 45,
