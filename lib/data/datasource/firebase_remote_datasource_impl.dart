@@ -5,13 +5,13 @@ import 'package:whatsapp_clone/data/datasource/firebase_remote_datasource.dart';
 import 'package:whatsapp_clone/data/model/user_model.dart';
 import 'package:whatsapp_clone/domain/entities/user_entity.dart';
 
-class FirebaseRemoteDatasourceImpl implements FirebaseRemoteDataSource {
+class FirebaseRemoteDataSourceImpl implements FirebaseRemoteDataSource {
   final FirebaseAuth auth;
   final FirebaseFirestore firestore;
 
    String _verificationId = '';
 
-  FirebaseRemoteDatasourceImpl({required this.auth, required this.firestore});
+  FirebaseRemoteDataSourceImpl({required this.auth, required this.firestore});
    @override
   Future<void> getCreateCurrentUser(UserEntity user) async {
     final userCollection = firestore.collection("users");
